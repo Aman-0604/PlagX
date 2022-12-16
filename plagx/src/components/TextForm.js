@@ -8,7 +8,7 @@ export default function TextForm(props) {
     let stringArray=[];// this will be containing all prefix of '('
     let queue=[];
     let prevElement="";
-    let helper="";// it's a string which will help us in solving issue that was raised in issue#1
+    let helper="";// it's a string which will help us in solving issue that was raised in issue#2
     const handleUpClick = () => {
         let prefixText="";//prefixText will contain the macros that we will be declaring at the start
         let newText="";//new text that contains changes
