@@ -22,6 +22,6 @@ https://github.com/firstcontributions/first-contributions
 
 # Fourth Step
 
-Added JS and CSS Bootstrap scripts in index.html
-Made component folder under which I kept `About.js`, `Navbar.js`, `TextForm.js`
-Remember it's our `App.js` that is rendered on the web
+Added JS and CSS Bootstrap scripts in index.html\
+Made component folder under which I kept `About.js`, `Navbar.js`, `TextForm.js`\
+Remember it's our `App.js` that is rendered on the web\
