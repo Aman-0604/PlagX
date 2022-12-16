@@ -8,14 +8,21 @@ export default function TextForm(props) {
     let stringArray=[];// this will be containing all prefix of '('
     let queue=[];
     let prevElement="";
+    let helper="";// it's a string which will help us in solving issue that was raised in issue#1
     const handleUpClick = () => {
         let prefixText="";//prefixText will contain the macros that we will be declaring at the start
         let newText="";//new text that contains changes
         for(const element of text){
             if(element==='('){
-                stringArray.push(prevElement);
+                if(prevElement===""){
+                    stringArray.push(helper);
+                }
+                else stringArray.push(prevElement);
             }
-            if(element===" ") prevElement="";
+            if(element===" " || element==="\n" || element==="\t"){
+                helper=prevElement;
+                prevElement="";
+            }
             else prevElement=prevElement+element;
             queue.push(element);
         }
@@ -27,6 +34,7 @@ export default function TextForm(props) {
             if(temp==='('){
                 newText=newText+pid+temp;
             }
+            else if(temp===" " && queue[0]==='(') continue;
             else newText=newText+temp;
         }
         
